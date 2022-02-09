@@ -16,6 +16,19 @@ h1{
 	color: #fff;
 	text-transform: uppercase;
 }
+
+span{
+	opacity: 0;
+	transition: all 1s ease;
+	transform: translateY(50px);
+	display: inline-block;
+
+}
+
+span.fade{
+	opacity: 1;
+	transform: translateY(0px);
+}
 h2{
 	font-size: 45px;
 	font-weight: 400;
@@ -556,6 +569,7 @@ a{
 }
 .contact-page .social-icon{
 	padding-top: 50px;
+	cursor: pointer;
 }
 
 .contact-page ul{
@@ -602,7 +616,7 @@ a{
 .contact-page .form-bg{
 	background: #FFD301;
     width: 740px;
-    height: 370px;
+    height: 370px; 
     margin-left: 10px;
     margin-right: 30px;
     margin-top: -30px;
@@ -644,8 +658,12 @@ a{
 	color: #fff;
 }
 
+
+	
+
+
 .contact-page .btn input[type=submit]{
-	background: #FDD80A;
+	background: #f9fd0d;
     width: 94%;
     text-align: center;
     text-decoration: none;
@@ -660,6 +678,27 @@ a{
     padding: 8px 0px;
     padding-top: 15px;
     margin-top: 20px;
+	overflow: hidden;
+}
+
+.btn::before{
+	position: absolute;
+	top: var(--y);
+	left:var(--x);
+	transition: width 0.5s, height 0.5s;
+
+}
+
+.contact-page .btn:hover input[type=submit] {
+
+	
+	
+	background:#110dfd ;
+
+}
+
+
+	
 }
 .contact-page .contact-form input,textarea:focus{
 	outline: none !important;
@@ -704,28 +743,33 @@ a{
 }
 .navigation{
 	width:100%;
-	position: absolute;
+	position:absolute ;
+	right: 0px;
+	height: 92vh;
+
 
 }
 .navigation ul{
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	text-align: center;
+	text-align: left;
 }
 .navigation ul li{
-	display: inline-block;
+	display: flex;
 
 }
 .navigation ul li a{
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 10px;
 	font-family: inherit;
 	font-weight: 500;
 	color: #fff;
-	padding: 10px 5px;
-	margin: 15px 0;
+
+
+	
 }
 
 
